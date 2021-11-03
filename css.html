@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        p {
+            color: red;
+        }
+        .one {
+            color: aqua;
+        }
+        .two {
+            border: solid 1px black;
+        }
+        .three {
+            font-size: 48px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <!-- 1. class는 중첩해서 사용할 수 있다.반면 id는 one&only!!!
+        아이디를 동일한 애를 여러번쓰면 오류?버그가나는게 아니다.다만 의도와상이해질뿐이다.
+    2. page내 class는 여러개 존재해도 됩니다. -->
+    <h1 class="one">h1-hello world</h1>
+    <h1 class="two three">h1-hello world</h1>
+    <h1 class="three">h1-hello world</h1>
+    <h1>h1-hello world</h1>
+    <h1>h1-hello world</h1>
+    <p>p-hello world</p>
+
+</body>
+</html>

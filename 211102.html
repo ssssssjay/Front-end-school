@@ -15,18 +15,7 @@
 
     <form action="./211102.html" method="get">
 
-        <label for="one">id</label>
-        <input type="text" name="id" id="one">
-        <label for="two">password</label>
-        <input type="password" name="pw" id="two">
-        
-        <button type="submit">로그인</button><br>
-        
-
-        <input type="text"><br>
-        
-        <input type="password"><br>
-        
+    
         <input type="date"><br>
         
         <input type="time"><br>
@@ -115,6 +104,48 @@
         <button type="submit">sign-in</button>
     </form>
 
+    <!-- 2일차 보강 -->
 
+    <!-- 팁 1 -->
+    <p>MDN 예제입니다.</p>
+    <form>
+        <fieldset>
+            레전드는 위로올라가게된다
+            <legend>Choose your favorite monster</legend>
+      
+          <input type="radio" id="kraken" name="monster">
+          <label for="kraken">Kraken</label><br/>
+      
+          <input type="radio" id="sasquatch" name="monster">
+          <label for="sasquatch">Sasquatch</label><br/>
+      
+          <input type="radio" id="mothman" name="monster">
+          <label for="mothman">Mothman</label>
+        </fieldset>
+    </form>
+
+    <!-- 팁 2 -->
+    <form>
+        <!-- 요거는 자바스크립트에용 수치가 나오는 볼륨조절임 keyword : shadow dom-->
+        <!-- 사용자 에이전트 그림자 돔표시 _원래요소가 있었는데 숨겨진 것이다 저걸 체크표시해주면 숨겨진게 보임:정확히는 원래 작성되어있던 코드를 보는거다 -->
+        <fieldset oninput="볼륨.value=parseInt(볼륨바.value)">
+            <legend>볼륨바</legend>
+            <input id="볼륨바" name="bar" type="range" title="범위선택"> 
+            <output name="볼륨" title="볼륨표시">0</output>
+        </fieldset>
+    </form>
+
+    <!-- 팁 3 -->
+    <!-- 보통 저렇게 br태그로 개행을 하진 않습니다. -->
+    <form>
+        <fieldset>
+            <legend>Programming Skill</legend>
+            <label for="html">HTML</label>
+            <progress id="html" value="0.85" max="1">85%</progress><br>
+            <label for="css">CSS</label>
+            <progress id="css" value="0.85" max="1">85%</progress><br>
+            <label for="javascript">Javascript</label>
+            <progress id="javascript" value="0.35" max="1">35%</progress><br>
+        </fieldset>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+        /* 자손요소 */
+        ul p {
+            color: red;
+        }
+        /* 자식요소 */
+        li > P {
+            color:blue;
+        }
+        /* ul바로 밑에는 어떠한 p도 없으므로 스타일 먹는애가 없다 */
+        ul > p {
+            color: seagreen;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>hello world</p>
+        </li>
+        <li>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <p>hello world</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+
+    
+</body>
+</html>
