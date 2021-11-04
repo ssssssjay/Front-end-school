@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxmodel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .one {
+            border: 10px solid orange;
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+        .two {
+            box-sizing: border-box;
+            border: 10px solid orange;
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+        /* div {
+            margin-bottom: 20px;
+            width:100px;
+            height: 100px;
+        } */
+        .c1 {
+            border: 10px solid red;
+        }
+        .c2 {
+          border: 10px solid green;  
+        }
+        .c3 {
+            border: 10px dotted blue;
+        }
+        .c4 {
+            border: 10px double yellow;
+        }
+        .c5 {
+            border-top: 5px solid gray;
+            border-left: 3px solid gray;
+            border-right: 10px solid black;
+            border-bottom: 19px solid black;
+        }
+        .c6 {
+            width:100px;
+            height: 100px;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 10px solid orange;
+            border-top-left-radius: 70px;
+            border-top-right-radius: 40px;
+            background: hotpink;
+            margin-bottom: 0;
+            margin-right: 45px;
+        }
+        .c7 {
+            width:100px;
+            height: 100px;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 10px solid orange;
+            border-top-right-radius: 70px;
+            border-top-left-radius: 40px;
+            background: hotpink;
+            margin-bottom: 0;
+        }
+        .c8 {
+            box-sizing: border-box;
+            width: 250px;
+            height: 200px;
+            background: hotpink;
+            border-bottom-left-radius: 80px;
+            border-bottom-right-radius: 80px;
+            border-left: 10px solid orange;
+            border-right: 10px solid orange;
+            border-bottom: 10px solid orange;
+        }
+        .a1, .a2, .a3, .a4, .a5 {
+            border: solid 1px black;
+            margin: 0;
+            padding: 0;
+            color: red;
+        }
+        /* background vs background-color background가 더 큰 개념 */
+
+
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <br>
+
+    <div class="two"></div>
+    <br>
+
+    <!-- <div class="border">
+        <p>BORDER STUDY</p>
+    </div> -->
+
+    <!-- (.c$>p{hello})*4 -->
+    <div class="c1">
+        <p>hello</p>
+    </div>
+    <div class="c2">
+        <p>hello</p>
+    </div>
+    <div class="c3">
+        <p>hello</p>
+    </div>
+    <div class="c4">
+        <p>hello</p>
+    </div>
+    <div class="c5">
+        <p>hello</p>
+    </div>
+    <div class="c6">
+        <p></p>
+    </div>
+    <div class="c7"></div>
+    <div class="c8"></div>
+
+
+    <div class="a1">
+        <p>hello</p>
+    </div>
+    <div class="a2">
+        <p>hello</p>
+    </div>
+    <div class="a3">
+        <p>hello</p>
+    </div>
+    <div class="a4">
+        <p>hello</p>
+    </div>
+    <div class="a5">
+        <p>hello</p>
+    </div>
+
+</body>
+</html>
