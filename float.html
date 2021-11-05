@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devil-Float</title>
+    <style>
+        /* body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            border: 3px solid blue;
+        }
+        .box {
+            box-sizing: border-box;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+        } */
+        ul {
+            /* 부모가 띄워진 자식을 알기위한 속성 */
+            /* overflow: hidden; */
+            /* display: inline-block; */
+            background: lightblue;
+            border: 1px solid black;
+        }
+        /* 가상요소는 기본적으로 인라인 after는 마지막 자식으로 가상요소를 생성*/
+        ul::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+        li {
+            width: 300px;
+            height: 100px;
+            background: pink;
+            float: left;
+        }
+        /* li:nth-child(2) {
+            width: 100%;
+            background: powderblue;
+        } */
+        li:nth-child(3) {
+            /* 같은 형제레벨에서 플롯확인하려면 클리어를 써야한다 */
+            /* clear: left; */
+        }
+    </style>
+</head>
+<body>
+    <!-- <section class="container">
+        <div class="box child1">child1</div>
+        <div class="box child2">child2</div>
+        <div class="box child3">child3</div>
+        <div class="box child4">child4</div>
+        <div class="box child5">child5</div>
+    </section> -->
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

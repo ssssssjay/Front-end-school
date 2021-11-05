@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <link rel="stylesheet" href="레이아웃.css">
+    <style>
+        body {
+            /* margin: 0; */
+            /* padding: 0; */
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            /* 마진 좌우는 줄수있다 위아래는 불가함 윗스값 줄 수 없다 인라인안에 블록이 들어갈수 없다 */
+            /* 뭔가 불편한 공백이 생김 왜냐 우리는 깔끔하게 줄바꿈을 해주는데, 그걸 space로 인식하여서 뭔가 약간의 불편한 공백이 생긴다_줄안바꿈, 부모요소 폰트사이즈0+인라인은 사이즈 줌*/
+            /* display: inline-block;  */
+            /* margin: 10px; */
+            /* border: 1px solid black; */
+        }
+        .box2 {
+            background: red;
+            /* normal flow의 흐름을 해치지 않는다 : relative*/
+            /* normal flow의 흐름을 해친다 : absolute */
+            /* absolute는 따로 지정하지 않으면 그 때 자신의 노말플로우위치에서 뜨게 된다 */
+            position: absolute;
+            left: 70px;
+        }
+        
+        section {
+            height: 1000px;
+            border: 3px solid black
+        }
+        h2 {
+            /* 얼마안된거라 벤더프리픽스 줘야함 */
+            /* 가장 가까운 부모에 붙게되는데,,? 자신의 위치에서 스크롤이 넘길때(임계점)부터 붙어있는다. 부모요소가 끝이나면은 끝난다..? */
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background: chartreuse;
+        }
+        ul {
+
+        }
+        li {
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 브라우저는 텍스트들을 인라인이라고 생각한다 -->
+    <div class="box1">content1</div>
+    <div class="box2">content2</div>
+    <div class="box3">content3</div>
+    <div class="box4">content4</div>
+    <div class="box5">content5</div>
+    <div class="box6">content6</div>
+    <div class="box7">content7</div>
+    <div class="box8">content8</div>
+    <div class="box9">content9</div>
+    <div class="box10">content10</div>
+
+
+    <h1>sticky test</h1>
+    <section>
+        <h2>1. 오늘의 점심 메뉴</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>2. 오늘의 간식 메뉴</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>3. 오늘의 저녁 메뉴</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro earum non deserunt possimus iste voluptate eum impedit, veritatis eveniet fuga modi aliquam debitis voluptatem blanditiis quis dicta accusantium ut delectus, quibusdam mollitia tempora ratione? Nemo quisquam saepe rem eum ad, aperiam odit, nobis a quis asperiores quaerat quos, ipsam dolorum voluptates debitis voluptatem. Excepturi voluptatem fuga corporis voluptate dicta modi est, assumenda maiores fugiat iste laudantium perspiciatis possimus, dolorum voluptatibus animi quod suscipit. Cupiditate, sapiente beatae fuga porro ex error cumque dicta velit saepe explicabo sint animi quia. Qui quaerat ratione nostrum illum porro debitis, commodi et nam atque odio.</li>
+        </ul>
+    </section>
+</body>
+</html>

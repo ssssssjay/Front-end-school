@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX</title>
+    <style>
+        body {
+        font-family: sans-serif;
+        box-sizing: border-box;
+        font-weight: 600;
+    }
+        .container  {
+            background: #f9f1f0;
+            border: 2px solid black;
+            height: 500px;
+
+            /* flex 기본적으로 block이어서 가로 100%먹음 */
+            display: flex;
+
+            /* default:row */
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+
+            /* flex-start : default  main-axis를 알아야 한다. flex-direction 축을 기준으로 정렬을 한다 */
+            justify-content: flex-start;
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* 같은넓이의 여백으로 감쌈 */
+            /* justify-content: space-around; */
+            /* 완전히 똑같은 여백으로 감쌈 */
+            /* justify-content: space-evenly; */
+
+            /* default:stretch */
+            align-items: stretch;
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            background: royalblue;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+</body>
+</html>
