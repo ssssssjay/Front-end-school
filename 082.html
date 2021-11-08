@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 슬라이드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        /* animation */
+        @keyframes 돌아 {
+            0% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(-20%);
+            }
+            50% {
+                transform: translateY(-40%);
+            }
+            75% {
+                transform: translateY(-60%);
+            }
+            100% {
+                transform: translateY(-80%);
+            }
+        }
+        /* reset */
+        body, h1, h2, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        /* style */
+        body {
+            background: deepskyblue;
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        .name {
+            text-align: center;
+            margin: 100px;
+            font-size: 50px;
+            color: black;
+        }
+        .name-job {
+            position: relative;
+            height: 100px;
+            /* 오버플로우 히든이라서 높이를 넘어선애들을 안보여준다 */
+            line-height: 100px;
+            overflow: hidden;
+            color: white;
+        }
+        .name-job-list {
+            animation: 돌아 5.5s;
+            animation-iteration-count: infinite;
+            /* animation-direction: reverse; */
+        }
+        /*블러처리해주기*/
+        .name-job::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 10px 10px deepskyblue;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="name">
+        I'm a
+        <div class="name-job">
+            <ul class="name-job-list">
+                <li>안녕하세요</li>
+                <li>개발어린이 (개린이)</li>
+                <li>성재입니다</li>
+                <li>꼭 개발자될래요</li>
+                <!-- 애니메이션에서 툭 끊기는걸 방지하려고 트릭을 준거임 -->
+                <li>안녕하세요</li>
+            </ul>
+        </div>        
+        <h2 class="name-title">Licat</h2>
+    </div>
+
+</body>
+</html>

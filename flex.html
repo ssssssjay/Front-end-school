@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLEX</title>
+    <link rel="stylesheet" href="./reset.css">
     <style>
         body {
         font-family: sans-serif;
@@ -29,6 +30,7 @@
             justify-content: flex-start;
             /* justify-content: flex-end; */
             /* justify-content: center; */
+            /* 끝과 끝으로 쫙 늘려놓음 */
             /* justify-content: space-between; */
             /* 같은넓이의 여백으로 감쌈 */
             /* justify-content: space-around; */
@@ -51,6 +53,61 @@
             text-align: center;
             line-height: 100px;
         }
+        ul {
+            display: flex;
+            height: 100vh;
+            /* 쭉늘린다. 단, 자식의 높이가 적용이 되어있다면 늘려지지않는다. */
+            /* align-items: stretch; */
+            /* 중앙정렬해버린다. */
+            /* align-items: center; */
+            /* 시작라인으로 올린다. */
+            /* align-items: flex-start; */
+            /* 끝라인으로 내린다. */
+            /* align-items: flex-end; */
+            
+            /* 처리전에는 너비가 100이어도 줄여서 한줄에 보이게 했다*/
+            /*wrap쓰니까 너비가 그대로 잘 나오고 줄바꿈이됨*/
+            flex-wrap: wrap;
+            /*기본값*/
+            /* flex-wrap: nowrap;  */
+            /* flex-wrap: wrap-reverse; */
+
+            /* align-content: center; */
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+            /* align-content: stretch; */
+
+            flex-direction: column;
+        }
+        li {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            background: lightcoral;
+            text-align: center;
+            
+            /* flex-direction에 따라 크기가 결정.로우면 가로, 컬럼이면 세로 길이가 됨 */
+            /* 윗스 하이트 값이 있어도 베이시스가 적용 */
+            flex-basis: auto;
+            flex-basis: 200px;
+            /* flex-basis: content; */
+            /* flex-basis: ; */
+        }
+
+        .practice {
+            width: 200px;
+            height: 200px;
+            background: navy;
+            display: flex;
+            justify-content: flex-end;
+            /* flex-direction: row-reverse; */
+            align-items: center;
+        }
+        .item {
+            width: 50px;
+            height: 50px;
+            background: olive;
+        }
 
     </style>
 </head>
@@ -60,5 +117,25 @@
         <div class="box">box2</div>
         <div class="box">box3</div>
     </div>
+
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <li>list6</li>
+        <li>list7</li>
+        <li>list8</li>
+        <li>list9</li>
+        <li>list10</li>
+        <li>list11</li>
+        <li>list12</li>
+    </ul>
+
+    <div class="practice">
+        <div class="item"></div>
+    </div>
+
 </body>
 </html>
