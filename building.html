@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building!!!!!!</title>
+    <style>
+        @keyframes hojun {
+            from {
+                background-position: 0px, 0px;
+            }
+
+            to {
+                /* transform으로 밀어도 됨 */
+                background-position: -3730px, 0;
+            }
+        }
+
+        .building1 {
+            width: 110px;
+            height: 180px;
+            background: url(./building/building1.png) no-repeat;
+            /* 쇼로로로로록 올라가게 보임 */
+            animation: hojun 2s steps(33);
+            /* 그냥 쫌 이상함;;그림자체가 죽 밀리는 느낌 */
+            /* animation: hojun 5s; */
+            /* 마지막에 멈추게 해주는 장치 */
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="building1"></div>
+</body>
+
+</html>

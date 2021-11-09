@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective vanishing point</title>
+    <style>
+        @keyframes 회전 {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(90deg);
+            }
+        }
+        .원본 {
+            display: flex;
+            justify-content: space-between;
+            width: 1000px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 100px auto;
+            perspective: 600px;
+        }
+
+        .회전패널 {
+            font-size: 22px;
+            font-weight: bold;
+            width: 200px;
+            height: 200px;
+            background: aqua;
+            border: 1px solid brown;
+            animation: 회전 6s infinite;
+            /* transition: all 2s; */
+            /* transform: rotateY(45deg); */
+        }
+        .회전패널:hover {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="원본">
+        <div class="회전패널">1</div>
+        <div class="회전패널">2</div>
+        <div class="회전패널">3</div>
+        <div class="회전패널">4</div>
+        <div class="회전패널">5</div>
+        <div class="회전패널">6</div>
+    </div>
+</body>
+</html>

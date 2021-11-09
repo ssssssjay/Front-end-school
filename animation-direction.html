@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>direction</title>
+    <style>
+        @keyframes move {
+            0% {
+                background: lightgray;
+                transform: translate(0, 0)
+            }
+            25% {
+                background: lightpink;
+                transform: translate(200px, 0)
+            }
+            50% {
+                background: lightseagreen;
+                transform: translate(200px, 200px) rotate(180deg)
+            }
+            75% {
+                background: lightgreen;
+                transform: translate(0, 200px) scale(2) rotate(360deg)
+            }
+            100% {
+                background: lightgray;
+                transform: translate(-1000px, 200px)
+            }
+        }
+
+        div {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 22px;
+            top: 10%; 
+            left: 30%;
+            width: 150px;
+            height: 150px;
+            background: lightskyblue;
+            animation: move 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out ;
+            /* animation-direction: normal; */
+            /* animation-direction: reverse; */
+            animation-direction: alternate;
+            /* animation-direction: alternate-reverse; */
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div>HELLO!!!!!</div>
+</body>
+</html>

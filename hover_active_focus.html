@@ -1,0 +1,52 @@
+    background: none;
+    color: coral;
+<!DOCTYPE html>
+<html lbuttonng="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover_active_focus</title>
+    <style>
+        .one {
+            background: chocolate;
+            width: 100px;
+            height: 100px;
+            transition: all 1s;
+        }
+        .one:hover {
+            background: darkseagreen;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box {
+            transition: all 0.3s;
+        }
+        .box:focus {
+            background: red;
+            color: white;
+        }
+        .btn {
+            border: 4px solid coral;
+            border-radius: 4px;
+            padding: 30px 60px;
+            background: none;
+            color: coral;
+            font-size: 32px;
+            /* 변화될 때 시간을 준다. all은 모든 변화에 대해서 시간을 주겠다는 의미임 */
+            transition: all 0.3s;
+        }
+        .btn:active {
+            background: lightgoldenrodyellow;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">hover</div>
+    <input type="text" class="box" placeholder="Click me!!!!">
+    <button class="btn">plz click me!!</button>
+</body>
+</html>
