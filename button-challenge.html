@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button-challenge</title>
+    <style>
+        div {
+            position: relative;
+            margin-bottom: 30px;
+            width: 300px;
+            height: 150px;
+            background: royalblue;
+            border: 2px solid black;
+            border-radius: 15px;
+            transition: all 1.4s;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150px;
+            overflow: hidden;
+
+        }
+        .c1:hover {
+            transform: translateX(100px);
+            transition-timing-function: ease;
+        }
+        .c2:hover {
+            transform: translateX(100px);
+            transition-timing-function: linear;
+        }
+        .c3:hover {
+            background: darkgreen;
+        }
+        .c4:hover {
+            background: darkgreen;
+            color: salmon;
+        }
+        .c5:hover {
+            transform: scale(1.4);
+        }
+        .c6:hover {
+            width: 1000px;
+            height: 270px;
+        }
+        .c7:hover {
+            letter-spacing: 20px;
+            width: 370px;
+        }
+        .c8:hover {
+            /* overflow hidden 있는거 명심!!! */
+            line-height: 400px;
+        }
+        .c9:hover {
+            opacity: 0.3;
+        }
+        .c10:hover {
+            border-color:deepskyblue;
+            border-width: 20px;
+        }
+        .c11:hover {
+            transform: rotate(20deg);
+        }
+        .c12:hover {
+            transform-origin: top;
+            transform: rotate(20deg);
+
+        }
+        .c13:hover {
+            transform-origin: right;
+            transform: rotate(20deg);
+
+        }
+        .c14:hover {
+            transform-origin: left;
+            transform: rotate(20deg);
+        }
+        .c15:hover {
+            transform-origin: bottom;
+            transform: rotate(20deg);
+        }
+        .c16::before {
+            content: '';
+            position: absolute;
+            background-color: seagreen;
+            /* 전체를 다 차지하게 만드는 방법!!!! */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            /* 이 값이 클수록 멀리서 날아오기에 오래걸린다 */
+            transform: translateX(550px);
+            transition: all 1s;
+        }
+        .c16:hover::before {
+            transform: translateX(0px);  
+            /* opacity: .4; */
+        }
+
+        .c17::before {
+            content: '';
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            height: 10px;
+            left: 0;
+            bottom: 0;
+            transform: translateX(-550px);
+            transition: all 1s;
+        }
+
+        .c17:hover::before {
+            transform: translateX(0);
+        }
+
+        .c17::after {
+            content: '';
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            height: 10px;
+            left: 0;
+            bottom: 0;
+            transform: translateX(550px);
+            transition: all 1s;
+        }
+        .c17:hover::after {
+            transform: translateX(0);
+        }
+
+        .c18::before {
+            content: '';
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            height: 10px;
+            left: 0;
+            bottom: 0;
+            transform: translateX(-550px);
+            transition: all 1s;
+        }
+
+        .c18:hover::before {
+            transform: translateX(0);
+        }
+
+        .c18::after {
+            content: '';
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            height: 10px;
+            right: 0;
+            top: 0;
+            transform: translateX(550px);
+            transition: all 1s;
+        }
+
+        .c18:hover::after {
+            transform: translateX(0);
+        }
+
+
+        .c19::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: teal;
+            transition: all 0.8s;
+            transform: rotateX(90deg);
+            z-index: -1;
+        }
+
+        .c19:hover::before {
+            transform: rotateX(0);
+        }
+        .c19::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: teal;
+            transition: all 0.8s;
+            transform: rotateY(90deg);
+            z-index: -1;
+        }
+        .c19:hover::after {
+            transform: rotateY(0);
+        }
+        .c19:hover {
+            /* z-index: 1; */
+        }
+        .c19 {
+            z-index: 1;
+        }
+
+        .c20::after {
+            content: '1';
+        }
+        .c20::after::after {
+            content: '2';
+        }
+        .c20::after::after::after {
+            content: '3';
+        }
+
+        .c21::before {
+            position: absolute;
+            content: '짜-자잔!';
+            color: white;
+            background: coral;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-100%);
+            transition: all .8s;
+        }
+        .c21:hover::before {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">ease</div>
+    <div class="c2">linear</div>
+    <div class="c3">background</div>
+    <div class="c4">color!</div>
+    <div class="c5">scale1.4</div>
+    <div class="c6">size</div>
+    <div class="c7">letterspace</div>
+    <div class="c8">lineheight</div>
+    <div class="c9">opacity</div>
+    <div class="c10">border</div>
+    <div class="c11">rotate</div>
+    <div class="c12">rotate-top</div>
+    <div class="c13">rotate-right</div>
+    <div class="c14">rotate-left</div>
+    <div class="c15">rotate-bottom</div>
+    <div class="c16">pseudo-1</div>
+    <div class="c17">pseudo-2</div>
+    <div class="c18">pseudo-3</div>
+    <div class="c19">BUTTON</div>
+    <div class="c20">after중첩</div>
+    <div class="c21">Hello!</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media-query</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+        .container {
+            width: 100%;
+            height: 500px;
+            background: yellow;
+        }
+        .item {
+            margin: 50px;
+            width: 500px;
+            background-color: darkturquoise;
+        }
+
+        /* 1000픽셀일때까지 하위의 스타일을 먹인다!!! */
+        /* 너비가 0픽셀부터 1000픽셀까지는 하위의 스타일!!!!! */
+        @media screen and (max-width:1000px) {
+            body {
+                background-color: teal;
+                /* 다른 요소들의 스타일을 재정의하지않으면 원래의 css가져온다 */
+            }
+        }
+        /* 0픽셀부터 600픽셀까지는 다져블루로 배경이 적용된다 */
+        @media screen and (max-width:600px) {
+            body {
+                background-color: dodgerblue;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Heading1</h1>
+    <div class="container">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nostrum maxime rem, enim at quam velit tempora, doloribus explicabo animi tenetur perspiciatis eaque nobis, consectetur laborum impedit ducimus deleniti inventore?</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nostrum maxime rem, enim at quam velit tempora, doloribus explicabo animi tenetur perspiciatis eaque nobis, consectetur laborum impedit ducimus deleniti inventore?</div>
+    </div>
+</body>
+</html>
