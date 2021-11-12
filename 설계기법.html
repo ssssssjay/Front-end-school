@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설계기법</title>
+    <style>
+        /* .btn1 {
+            width: 200px;
+            height: 80px;
+            font-size: 30px;
+            font-weight: bold;
+        } */
+
+        /* .btn2 {
+            width: 200px;
+            height: 80px;
+            font-size: 30px;
+            font-weight: bold;
+
+            background: black;
+            border: 3px dotted #fff;
+            color: #fff;
+        } */
+        /* 두가지 버튼이 구조가 같아요 아래처럼 분리할 수 있어요 */
+
+        /* 구조 */
+        .btn {
+            width: 200px;
+            height: 80px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* 스킨 */
+        .btn-close {
+            background: black;
+            border: 3px dotted #fff;
+            color: #fff;
+        }
+
+        /* 아래는 콘텐츠의 스타일이 컨테이너에 종속되는 사례입니다. 부모와 자식! */
+        /* 컨텐츠의 스타일 선택자에 컨테이너의 클래스를 배제는것이 필요합니다 */
+        /* 절대적인 준수사항은 아닙니다. 이러한 방법이 있다는 얘기입니다. */
+        #main .btn {
+            width: 300px;
+            padding: 20px 10px;
+            margin: 10px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        #main .general {
+            background: aqua;
+            color: black;
+        }
+        #main .warning {
+            background: dodgerblue;
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <button type="button" class="btn"></button>
+    <button type="button" class="btn btn-close"></button>
+
+    <main id="main">
+        <button type="button" class="btn general">기본버튼</button>
+        <button type="button" class="btn warning">취소버튼</button>
+    </main>
+
+    <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+
+</body>
+</html>
