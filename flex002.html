@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex002</title>
+    <style>
+        .container-color {
+            background-color: lightgoldenrodyellow;
+            border: 3px solid black;
+            border-radius: 10px;
+            height: 300px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .item-color {
+            background-color: dodgerblue;
+            border: 3px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .container1 {
+            display: flex;
+            /* flex-direction: column; */
+            flex-direction: row;
+        }
+        .item:nth-child(2) {
+            /* 실습 1 */
+            /* 너비를 조절할경우 UI가 깨짐 */
+            /* width: 400px; */
+            flex-basis: 400px;
+        }
+    </style>
+</head>
+<body>
+    flex-basis 실습
+    <div class="container-color container1">
+        <div class="item-color item">Lorem.</div>
+        <div class="item-color item">Lorem, ipsum.</div>
+        <div class="item-color item">Lorem, ipsum dolor.</div>
+        <div class="item-color item">Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실전메뉴바</title>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+        /* reset */
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* style */
+        nav {
+            background-color: #222;
+            padding: 0 15px;
+        }
+        .logo {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .item {
+            padding: 10px;
+        }
+        a:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo">
+                <a href="#">Logo</a>
+            </li>
+            <li class="item">
+                <a href="#">About me</a>
+            </li>
+            <li class="item">
+                <a href="#">Skills</a>
+            </li>
+            <li class="item">
+                <a href="#">Blog</a>
+                <ul class="sub-menu">
+                    <li class="sub-item">
+                        <a href="#">HTML</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="#">CSS</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="#">JAVASCRIPT</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="#">INFRA</a>
+                    </li>
+                    <li>
+                        <a href="#">NODE</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="#">Contact</a>
+            </li>
+            <li class="toggle">
+                <a href="#"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

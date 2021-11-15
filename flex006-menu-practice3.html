@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실전메뉴바</title>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+        /* reset */
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* style */
+        nav {
+            background-color: #222;
+            padding: 0 15px;
+        }
+        .logo {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .item {
+            padding: 10px;
+        }
+        a:hover {
+            color: #ccc;
+        }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .menu li a {
+            display: block;
+            padding: 10px;
+        }
+        .menu li .sub-item a {
+            /* 살짝 오른쪽으로 서브메뉴느낌나게 처리 */
+            padding-left: 20px;
+        }
+        .sub-item {
+            /* 개발할때에는 블락으로! */
+            display: block;
+            /* display: none; */
+        }
+        .icon {
+            /* 모바일일때만 보여주게 할거임!!! */
+            display: none;
+        }
+        @media screen and (max-width: 800px) {
+            .icon {
+                display: block;
+                /* 아이콘위치를 상단으로 끌어올리는 작업 */
+                order: 1;
+                /* 햄버거크기조절하는 방법임 */
+                line-height: 35px;
+                font-size: 25px;
+            }
+            .item {
+                /* 아이콘위치를 상단으로 끌어올리는 작업 */
+                order: 2;
+                width: 100%;
+                text-align: center;
+            }
+            .sub-item {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo">
+                <a href="#">Logo</a>
+            </li>
+            <li class="item">
+                <a href="#">About me</a>
+            </li>
+            <li class="item">
+                <a href="#">Skills</a>
+            </li>
+            <li class="item">
+                <a href="#">Blog</a>
+                <ul class="sub-menu">
+                    <li class="sub-item">
+                        <a href="#">HTML</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="#">CSS</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="#">JAVASCRIPT</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="#">INFRA</a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="#">NODE</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="#">Contact</a>
+            </li>
+            <li class="icon">
+                <a href="#"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

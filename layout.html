@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <title>layout</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .blind {
+            position: absolute; 
+            width: 1px; 
+            height: 1px; 
+            clip: rect(0 0 0 0); 
+            overflow: hidden;
+        }
+        .menu {
+            display: flex;
+            border: 1px solid black;
+        }
+        .menu-item {
+            padding: 10px;
+        }
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .main-section {
+            display: flex;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .main-article {
+            width: 300px;
+            margin: 10px;
+            background-color: cornflowerblue;
+            padding: 10px;
+        }
+        .article-img {
+            width: 100%;
+        }
+        .main-side {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="blind">Layout-Practice</h1>
+        <a href="#">main-page</a>
+        <nav>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#">menu1</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">menu2</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">menu3</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">menu4</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-container">
+        <section class="main-section">
+            <h2 class="blind">본문영역</h2>
+            <article class="main-article">
+                <img src="./a.jpg" alt="카드이미지" class="article-img">
+                <h3>카드제목</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam dignissimos harum tempora nam. Harum architecto, suscipit consequatur laboriosam ab minima blanditiis aut obcaecati magnam rem alias sed et deserunt distinctio?</p>
+            </article>
+            <article class="main-article">
+                <img src="./a.jpg" alt="카드이미지" class="article-img">
+                <h3>카드제목</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam dignissimos harum tempora nam. Harum architecto, suscipit consequatur laboriosam ab minima blanditiis aut obcaecati magnam rem alias sed et deserunt distinctio?</p>
+            </article><article class="main-article">
+                <img src="./a.jpg" alt="카드이미지" class="article-img">
+                <h3>카드제목</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam dignissimos harum tempora nam. Harum architecto, suscipit consequatur laboriosam ab minima blanditiis aut obcaecati magnam rem alias sed et deserunt distinctio?</p>
+            </article>
+        </section>
+        <aside class="main-side">
+            <h2 class="blind">광고영역</h2>
+            <h3>광고제목</h3>
+            <p>광고내용</p>
+        </aside>
+    </div>
+    <footer>
+        <h2 class="blind">하단영역</h2>
+        <dl>
+            <dt></dt>
+            <dd></dd>
+            <dt></dt>
+            <dd></dd>
+            <dt></dt>
+            <dd></dd>
+            <dt></dt>
+            <dd></dd>
+        </dl>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </footer>
+</body>
+</html>

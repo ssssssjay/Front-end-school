@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <title>layout</title>
+    <style>
+        /* reset */
+        * {
+            box-sizing: border-box;
+        }
+        /* sr-only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            left: -9999px;
+            top: auto;
+            overflow: hidden;
+        }
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            border: 10px solid black;
+        }
+        .item {
+            border: 10px solid blue;
+        }
+        .item:nth-child(1) {
+            border: 10px solid green;
+            width: 100%;
+        }
+        .item:nth-child(2) {
+            width: 70%;
+            border: 10px solid cornflowerblue;
+        }
+        .item:nth-child(3) {
+            width: 30%;
+            border: 10px solid cornflowerblue;
+        }
+        .item:nth-child(4) {
+            width: 100%;
+            border: 10px solid pink;
+        }
+
+        @media screen and (max-width: 800px) {
+            .item:nth-child(2) {
+            width: 100%;
+            }
+        .item:nth-child(3) {
+            width: 100%;
+            }
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <header class="item">
+        <h1 class="sr-only">title1</h1>
+        <nav>
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="item">
+        <h2 class="sr-only">title2</h2>
+        <article>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis explicabo ut cumque esse corporis et deserunt recusandae dolorem similique quae numquam ipsa alias provident dolores inventore totam, quas dolore.
+            Sit quod nihil eaque soluta dolore deserunt vero, similique inventore quam id aperiam at suscipit quasi porro explicabo iusto ipsam omnis voluptate, nemo reprehenderit, illum dolorum. Non et officiis totam!
+        </article>
+    </section>
+    <aside class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, obcaecati, doloribus aspernatur voluptas neque minima voluptatem laudantium cupiditate facere consequuntur assumenda inventore accusamus dignissimos, exercitationem unde cumque! Aliquid, nesciunt consectetur!</aside>
+    <footer class="item">footer</footer>
+</body>
+</html>
