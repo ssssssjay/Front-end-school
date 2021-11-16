@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* perspective: 600px; */
+        }
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+            animation: 3s rotation alternate infinite;
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            
+        }
+        @keyframes rotation {
+            0% {
+                transform: rotateX(0) rotateY(0) rotateZ(0);
+            }
+            33.33% {
+                transform: rotateX(60deg) rotateY(0) rotateZ(0);
+            }
+            66.66% {
+                transform: rotateX(60deg) rotateY(-10deg) rotateZ(0);
+            }
+            100% {
+                transform: rotateX(60deg) rotateY(-10deg) rotateZ(50deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+</body>
+</html>

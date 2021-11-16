@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .container {
+            background-color: lightgoldenrodyellow;
+            border: 2px solid black;
+            padding: 10px;
+            
+            display: grid;
+
+            grid-template-areas: 
+            'header header header'
+            'section section aside'
+            'footer footer footer';
+        }
+
+        .item {
+            border: 2px solid darkblue;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .header {
+            grid-area: header;
+            background-color: dodgerblue;
+        }
+        .section {
+            grid-area: section;
+            background-color: coral;
+        }
+        .aside {
+            grid-area: aside;
+            background-color: darkgreen;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: yellowgreen;
+        }
+        /* 그리드 트랙 행 또는 열 */
+        /* 그리드 셀 한 칸 */
+        /* 그리드 라인 셀 구분 선_1번부터 시작한다 */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Lorem.</div>
+        <div class="item section">Lorem, ipsum.</div>
+        <div class="item aside">Lorem, ipsum dolor.</div>
+        <div class="item footer">Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+</html>
