@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* 여러줄 주석처리 */
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  color: red;
+  font-size: 20px;
+}
+
+.one {
+  color: red;
+}
+
+.one .two {
+  color: green;
+}
+
+.one .two .three {
+  font-size: 20px;
+}
+
+.one .four {
+  font-size: 30px;
+}
+
+.add-icon {
+  background-image: url();
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.box:hover {
+  background-color: coral;
+}
+
+ul li:hover {
+  background-color: cyan;
+  cursor: pointer;
+}
+
+ul li:last-child {
+  border-bottom: 2px solid black;
+}
+
+.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.article .article-content {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+i {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=001.css.map */

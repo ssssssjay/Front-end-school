@@ -1,0 +1,68 @@
+/* 여러줄 주석처리 */
+// 한 줄 주석처리. css로 변환되면 없어집니다.
+nav {
+    ul {
+        list-style: none;
+        li {
+            color: red;
+            font-size: 20px;
+        }
+    }
+}
+.one {
+    color: red;
+    .two {
+        color: green;
+        .three {
+            font-size: 20px;
+        }
+    }
+    .four {
+        font-size: 30px;
+    }
+}
+
+.add-icon {
+    background : {
+        image: url();
+        position: center center;
+        repeat: no-repeat; 
+        size: 14px 14px;
+    }
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    transition: all .3s;
+    &:hover {    
+        background-color: coral;
+    }
+}
+
+ul {
+    li {
+        &:hover {
+            background-color: cyan;
+            cursor: pointer;
+        }
+        &:last-child {
+            border-bottom: 2px solid black;
+        }
+    }
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    .article-content {
+        font-size: 14px;
+        opacity: 0.7;
+        @at-root i {
+        opacity: 0.5;
+        }
+    }
+}
