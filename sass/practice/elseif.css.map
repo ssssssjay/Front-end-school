@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAuBA,AAAA,KAAK,CAAC;EAnBF,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,CAAC;EAER,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,KAAS;EAInB,iBAAiB,EAWE,KAAK;CAC/B",
+    "sources": [
+        "elseif.scss"
+    ],
+    "names": [],
+    "file": "elseif.css"
+}

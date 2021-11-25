@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAYA,AAAA,IAAI,CAAC;EACD,SAAS,EANG,UAAe;CAO9B",
+    "sources": [
+        "while.scss"
+    ],
+    "names": [],
+    "file": "while.css"
+}
