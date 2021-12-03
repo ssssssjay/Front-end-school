@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change color</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid black;
+        }
+        .coral {
+            background-color: coral;
+        }
+        .dodger {
+            background-color: dodgerblue;
+        }
+        .dark {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div>Color</div>
+    <button class="one">Coral</button>
+    <button class="two">Dodgerblue</button>
+    <button class="three">Darkgreen</button>
+    <script>
+        const oneBtn = document.querySelector('.one');
+        const twoBtn = document.querySelector('.two');
+        const threeBtn = document.querySelector('.three');
+        const box = document.querySelector('div');
+        
+
+        oneBtn.addEventListener('click', function() {
+            box.classList.remove('dodger', 'dark')
+            box.classList.add('coral');
+        });
+
+        twoBtn.addEventListener('click', function() {
+            box.classList.remove('coral', 'dark')
+            box.classList.add('dodger');
+        });
+
+        threeBtn.addEventListener('click', function() {
+            box.classList.remove('dodger', 'coral')
+            box.classList.add('dark');
+        });
+    </script>
+</body>
+</html>

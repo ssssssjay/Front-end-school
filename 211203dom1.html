@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM1</title>
+</head>
+<body>
+    <ul>
+        <li id="first-item">one</li>
+        <li>two</li>
+        <li class="item-last">three</li>
+    </ul>
+    <script>
+        let item = document.getElementById('first-item');
+        console.log(item);
+        let item2 = document.getElementsByClassName('item-last');
+        console.log(item2);  // 모든걸~! 가져오기 때문에 '배열처럼' 보여줍니다. 정확히는 arrayLike
+        console.log(item2[0]);
+    </script>
+</body>
+</html>
